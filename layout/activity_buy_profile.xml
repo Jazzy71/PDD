@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E8E8E8"
+    android:padding="16dp">
+
+    <!-- Back Button Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start|center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back_black"
+            android:contentDescription="Back" />
+    </LinearLayout>
+
+    <!-- Profile Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start|center_vertical"
+        android:layout_marginBottom="24dp">
+
+        <!-- Profile Image -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/profile_image"
+                android:scaleType="centerCrop"
+                android:contentDescription="Profile" />
+        </LinearLayout>
+
+        <!-- Name and Role -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JAZZ"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/userRole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buyer"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Contact Info Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="40dp">
+
+        <!-- Phone Number -->
+        <LinearLayout
+            android:id="@+id/phoneContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/phoneIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_phone"
+                android:contentDescription="Phone" />
+
+            <TextView
+                android:id="@+id/phoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+91 89107XXXXX"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- Email -->
+        <LinearLayout
+            android:id="@+id/emailContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/emailIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_email"
+                android:contentDescription="Email" />
+
+            <TextView
+                android:id="@+id/emailAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="jaz.c78@gmail.com"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Menu Options -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Favorites -->
+        <LinearLayout
+            android:id="@+id/favoritesOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/favoritesIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/icon_heart"
+                android:contentDescription="Favorites" />
+
+            <TextView
+                android:id="@+id/favoritesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favorites"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- Payments -->
+        <LinearLayout
+            android:id="@+id/paymentsOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/paymentsIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_payments"
+                android:contentDescription="Payments" />
+
+            <TextView
+                android:id="@+id/paymentsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payments"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- Tell your friends -->
+        <LinearLayout
+            android:id="@+id/tellFriendsOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/tellFriendsIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_share"
+                android:contentDescription="Tell Friends" />
+
+            <TextView
+                android:id="@+id/tellFriendsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tell your friends"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- Settings -->
+        <LinearLayout
+            android:id="@+id/settingsOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/settingsIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_settings"
+                android:contentDescription="Settings" />
+
+            <TextView
+                android:id="@+id/settingsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- Logout -->
+        <LinearLayout
+            android:id="@+id/logoutOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/logoutIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_logout"
+                android:contentDescription="Logout" />
+
+            <TextView
+                android:id="@+id/logoutText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

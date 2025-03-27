@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E8E8E8">
+
+    <!-- Header with Back Button and Search Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back_black"
+            android:contentDescription="Back"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Search Bar -->
+        <LinearLayout
+            android:id="@+id/searchBarContainer"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_edittext"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/searchIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_search"
+                android:contentDescription="Search Icon"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/et_search_car"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="Search your favorite car..."
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:background="@android:color/transparent"
+                android:inputType="text"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Favorites"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Items Grid -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Row 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <!-- Car 1 -->
+                <LinearLayout
+                    android:id="@+id/carItem1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@android:color/white">
+
+                    <!-- Car Image Container -->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/carImage1"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/car_wagon"
+                            android:contentDescription="Car Image"/>
+
+                        <ImageView
+                            android:id="@+id/favoriteIcon1"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="end|top"
+                            android:layout_margin="8dp"
+                            android:src="@drawable/icon_heart"
+                            android:contentDescription="Favorite"/>
+                    </FrameLayout>
+
+                    <!-- Car Details -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/carTitle1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2015 Maruti wagon"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/carDetails1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="43,721 km · petrol · manual"
+                            android:textColor="#666666"
+                            android:textSize="14sp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="4dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/carPrice1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₹3.11 Lakh"
+                                android:textColor="#000000"
+                                android:textStyle="bold"
+                                android:textSize="16sp"/>
+
+                            <TextView
+                                android:id="@+id/carOriginalPrice1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₹3.26 Lakh"
+                                android:textColor="#888888"
+                                android:textSize="14sp"
+                                android:layout_marginStart="8dp"/>
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/buyNowButton1"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:text="Buy now"
+                            android:textColor="#FFFFFF"
+                            android:backgroundTint="#000000"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Car 2 -->
+                <LinearLayout
+                    android:id="@+id/carItem2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@android:color/white">
+
+                    <!-- Car Image Container -->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/carImage2"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/car_wagon"
+                            android:contentDescription="Car Image"/>
+
+                        <ImageView
+                            android:id="@+id/favoriteIcon2"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="end|top"
+                            android:layout_margin="8dp"
+                            android:src="@drawable/icon_heart"
+                            android:contentDescription="Favorite"/>
+                    </FrameLayout>
+
+                    <!-- Car Details -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/carTitle2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2015 Maruti wagon"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/carDetails2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="43,721 km · petrol · manual"
+                            android:textColor="#666666"
+                            android:textSize="14sp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="4dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/carPrice2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₹3.11 Lakh"
+                                android:textColor="#000000"
+                                android:textStyle="bold"
+                                android:textSize="16sp"/>
+
+                            <TextView
+                                android:id="@+id/carOriginalPrice2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₹3.26 Lakh"
+                                android:textColor="#888888"
+                                android:textSize="14sp"
+                                android:layout_marginStart="8dp"/>
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/buyNowButton2"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:text="Buy now"
+                            android:textColor="#FFFFFF"
+                            android:backgroundTint="#000000"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Row 2 - Structure identical to Row 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <!-- Car 3 - Same structure as Car 1 -->
+                <LinearLayout
+                    android:id="@+id/carItem3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@android:color/white">
+
+                    <!-- Content similar to Car 1, with IDs updated -->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/carImage3"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/car_wagon"
+                            android:contentDescription="Car Image"/>
+
+                        <ImageView
+                            android:id="@+id/favoriteIcon3"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="end|top"
+                            android:layout_margin="8dp"
+                            android:src="@drawable/icon_heart"
+                            android:contentDescription="Favorite"/>
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/carTitle3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2015 Maruti wagon"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/carDetails3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="43,721 km · petrol · manual"
+                            android:textColor="#666666"
+                            android:textSize="14sp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="4dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/carPrice3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₹3.11 Lakh"
+                                android:textColor="#000000"
+                                android:textStyle="bold"
+                                android:textSize="16sp"/>
+
+                            <TextView
+                                android:id="@+id/carOriginalPrice3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₹3.26 Lakh"
+                                android:textColor="#888888"
+                                android:textSize="14sp"
+                                android:layout_marginStart="8dp"/>
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/buyNowButton3"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:text="Buy now"
+                            android:textColor="#FFFFFF"
+                            android:backgroundTint="#000000"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Car 4 - Same structure as Car 2 -->
+                <LinearLayout
+                    android:id="@+id/carItem4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@android:color/white">
+
+                    <!-- Content similar to Car 2, with IDs updated -->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/carImage4"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/car_wagon"
+                            android:contentDescription="Car Image"/>
+
+                        <ImageView
+                            android:id="@+id/favoriteIcon4"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="end|top"
+                            android:layout_margin="8dp"
+                            android:src="@drawable/icon_heart"
+                            android:contentDescription="Favorite"/>
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/carTitle4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2015 Maruti wagon"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/carDetails4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="43,721 km · petrol · manual"
+                            android:textColor="#666666"
+                            android:textSize="14sp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="4dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/carPrice4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₹3.11 Lakh"
+                                android:textColor="#000000"
+                                android:textStyle="bold"
+                                android:textSize="16sp"/>
+
+                            <TextView
+                                android:id="@+id/carOriginalPrice4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₹3.26 Lakh"
+                                android:textColor="#888888"
+                                android:textSize="14sp"
+                                android:layout_marginStart="8dp"/>
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/buyNowButton4"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:text="Buy now"
+                            android:textColor="#FFFFFF"
+                            android:backgroundTint="#000000"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#F5F5F5"
+        android:padding="8dp"
+        android:gravity="center">
+
+        <!-- Buy -->
+        <LinearLayout
+            android:id="@+id/navBuy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/buyIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/icon_bag"
+                android:contentDescription="Buy"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buy"
+                android:textSize="12sp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <!-- Favorite -->
+        <LinearLayout
+            android:id="@+id/navFavorite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/favoriteIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/icon_favorite"
+                android:contentDescription="Favorite"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favorite"
+                android:textSize="12sp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <!-- Help -->
+        <LinearLayout
+            android:id="@+id/navHelp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/helpIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_help"
+                android:contentDescription="Help"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Help"
+                android:textSize="12sp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <!-- Home -->
+        <LinearLayout
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/homeIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/icon_home"
+                android:contentDescription="Home"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="12sp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <!-- Profile -->
+        <LinearLayout
+            android:id="@+id/navProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/profileIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_profile"
+                android:contentDescription="Profile"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textSize="12sp"
+                android:textColor="#000000"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

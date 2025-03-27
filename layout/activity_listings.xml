@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E6E6E6">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_black"
+            android:contentDescription="Back" />
+    </LinearLayout>
+
+    <!-- Title with icon -->
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/listings_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_listings"
+            android:contentDescription="Listings icon" />
+
+        <TextView
+            android:id="@+id/listings_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Listings"
+            android:textColor="#000000"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Search Bar -->
+    <LinearLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="24dp">
+
+        <LinearLayout
+            android:id="@+id/search_input_container"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_edittext"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="16dp">
+
+            <EditText
+                android:id="@+id/search_edit_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="Search your car....."
+                android:textColorHint="#000000"
+                android:textSize="16sp"
+                android:inputType="text"
+                android:imeOptions="actionSearch" />
+
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_search"
+                android:contentDescription="Search" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Car Listing Card -->
+    <LinearLayout
+        android:id="@+id/car_listing_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/rounded_edittext"
+        android:layout_marginBottom="16dp">
+
+        <!-- Main Car Image with Pagination Indicator -->
+        <LinearLayout
+            android:id="@+id/car_image_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/car_main_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/car_main_image"
+                    android:contentDescription="Car image" />
+
+                <TextView
+                    android:id="@+id/pagination_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 / 5"
+                    android:textColor="#000000"
+                    android:background="#80FFFFFF"
+                    android:padding="4dp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="16dp" />
+            </FrameLayout>
+
+            <!-- Thumbnail Images -->
+            <LinearLayout
+                android:id="@+id/thumbnails_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/thumbnail_1"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/car_thumbnail_1"
+                    android:layout_marginEnd="4dp"
+                    android:contentDescription="Thumbnail 1" />
+
+                <ImageView
+                    android:id="@+id/thumbnail_2"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/car_thumbnail_2"
+                    android:layout_marginHorizontal="4dp"
+                    android:contentDescription="Thumbnail 2" />
+
+                <ImageView
+                    android:id="@+id/thumbnail_3"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/car_thumbnail_3"
+                    android:layout_marginStart="4dp"
+                    android:contentDescription="Thumbnail 3" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Car Details -->
+        <LinearLayout
+            android:id="@+id/car_details_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <!-- Left side: car info -->
+            <LinearLayout
+                android:id="@+id/car_info_left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/car_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2015 Maruti wagon"
+                    android:textColor="#000000"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/car_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="43,721 km -petrol"
+                    android:textColor="#757575"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <!-- Right side: price -->
+            <LinearLayout
+                android:id="@+id/car_info_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/car_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹3.11 Lakh"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/price_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fixed on road price"
+                    android:textColor="#757575"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Status Button -->
+        <LinearLayout
+            android:id="@+id/status_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/status_button"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Not sold"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:background="@drawable/button_gray"
+                android:gravity="center"
+                android:padding="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

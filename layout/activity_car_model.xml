@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#E6E6E6">
+
+    <!-- Top Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/layoutTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_back_black"
+            android:background="@null"
+            android:contentDescription="Back button" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnMenu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_menu"
+            android:background="@null"
+            android:contentDescription="Menu button" />
+    </LinearLayout>
+
+    <!-- Car Details Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp">
+
+        <!-- Car logo -->
+        <LinearLayout
+            android:id="@+id/layout_logo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_text_background"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/img_car_logo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/hyundai_logo"
+                android:contentDescription="Car Logo" />
+        </LinearLayout>
+
+        <!-- Car details -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp">
+
+            <!-- Location -->
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Allahabad"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_text_background" />
+
+            <!-- Transmission type -->
+            <TextView
+                android:id="@+id/tv_transmission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manual"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_text_background" />
+
+            <!-- Year -->
+            <TextView
+                android:id="@+id/tv_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1999"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:padding="12dp"
+                android:background="@drawable/rounded_text_background" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Model Selection Title -->
+    <TextView
+        android:id="@+id/tvModelTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select car Model"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Search Bar -->
+    <LinearLayout
+        android:id="@+id/layoutSearchBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/rounded_edittext"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <EditText
+            android:id="@+id/etSearchModel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="Search your car model...."
+            android:inputType="text" />
+
+        <ImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icon_search"
+            android:contentDescription="Search icon" />
+    </LinearLayout>
+
+    <!-- Popular Models Title -->
+    <TextView
+        android:id="@+id/tvPopularModels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Popular Hyundai model"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Car Models List -->
+    <ScrollView
+        android:id="@+id/scrollModels"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Creta Model -->
+            <LinearLayout
+                android:id="@+id/layoutCreta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_button"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/ivCreta"
+                    android:layout_width="180dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/hyundai_creta"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Hyundai Creta" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp">
+
+                    <TextView
+                        android:id="@+id/tvCretaBrand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hyundai model"
+                        android:textSize="16sp"
+                        android:textColor="#666666"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvCretaModel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Creta"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Verna Model -->
+            <LinearLayout
+                android:id="@+id/layoutVerna"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_button"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/ivVerna"
+                    android:layout_width="180dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/hyundai_verna"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Hyundai Verna" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp">
+
+                    <TextView
+                        android:id="@+id/tvVernaBrand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hyundai model"
+                        android:textSize="16sp"
+                        android:textColor="#666666"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvVernaModel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Verna"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Venue Model -->
+            <LinearLayout
+                android:id="@+id/layoutVenue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_button"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/ivVenue"
+                    android:layout_width="180dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/hyundai_venue"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Hyundai Venue" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp">
+
+                    <TextView
+                        android:id="@+id/tvVenueBrand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hyundai model"
+                        android:textSize="16sp"
+                        android:textColor="#666666"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvVenueModel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Venue"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

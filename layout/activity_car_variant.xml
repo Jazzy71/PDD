@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#E6E6E6"
+        android:padding="16dp">
+
+        <!-- Top Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_back_black"
+                android:background="@null"
+                android:contentDescription="Back" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/btn_menu"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_menu"
+                android:background="@null"
+                android:contentDescription="Menu" />
+        </LinearLayout>
+
+        <!-- Car Details Title -->
+        <TextView
+            android:id="@+id/tv_car_details_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Car Details"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="16dp" />
+
+        <!-- Car Logo & Location -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp">
+
+            <LinearLayout
+                android:id="@+id/ll_car_logo_container"
+                android:layout_width="150dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/rounded_text_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/iv_car_logo"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:contentDescription="Hyundai Logo"
+                    android:src="@drawable/only_hyundai" />
+
+                <TextView
+                    android:id="@+id/tv_brand_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="HYUNDAI"
+                    android:textColor="#003C8F"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_selected_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Allahabad"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:background="@drawable/rounded_text_background"
+                    android:padding="12dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Select Variant Text -->
+        <TextView
+            android:id="@+id/tv_select_variant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Variant of your car"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Automatic & Manual Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_automatic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Automatic"
+                android:textAlignment="textStart"
+                android:paddingStart="24dp"
+                android:textSize="16sp"
+                android:background="@drawable/rounded_button"
+                android:layout_marginBottom="16dp"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp" />
+
+            <Button
+                android:id="@+id/btn_manual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Manual"
+                android:textAlignment="textStart"
+                android:paddingStart="24dp"
+                android:textSize="16sp"
+                android:background="@drawable/rounded_button"
+                android:layout_marginBottom="40dp"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp" />
+        </LinearLayout>
+
+        <!-- Fuel Variant Selection Text -->
+        <TextView
+            android:id="@+id/tv_select_right_variant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select the right variant"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Fuel Type Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_petrol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Petrol"
+                android:textAlignment="textStart"
+                android:paddingStart="24dp"
+                android:textSize="16sp"
+                android:background="@drawable/rounded_button"
+                android:layout_marginBottom="16dp"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp" />
+
+            <Button
+                android:id="@+id/btn_diesel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Diesel"
+                android:textAlignment="textStart"
+                android:paddingStart="24dp"
+                android:textSize="16sp"
+                android:background="@drawable/rounded_button"
+                android:layout_marginBottom="16dp"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp" />
+
+            <Button
+                android:id="@+id/btn_electric"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Electric"
+                android:textAlignment="textStart"
+                android:paddingStart="24dp"
+                android:textSize="16sp"
+                android:background="@drawable/rounded_button"
+                android:layout_marginBottom="16dp"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

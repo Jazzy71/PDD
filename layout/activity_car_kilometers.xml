@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#E6E6E6">
+
+    <!-- Top bar with back button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_back_black"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back button" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btn_menu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_menu"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Menu button" />
+    </LinearLayout>
+
+    <!-- Your Car Details header -->
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Car Details"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Car details section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp">
+
+        <!-- Car logo -->
+        <LinearLayout
+            android:id="@+id/layout_logo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_text_background"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/img_car_logo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/hyundai_logo"
+                android:contentDescription="Car Logo" />
+        </LinearLayout>
+
+        <!-- Car details -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp">
+
+            <!-- Location -->
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Allahabad"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_text_background" />
+
+            <!-- Transmission type -->
+            <TextView
+                android:id="@+id/tv_transmission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manual"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_text_background" />
+
+            <!-- Year -->
+            <TextView
+                android:id="@+id/tv_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1999"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:padding="12dp"
+                android:background="@drawable/rounded_text_background" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Car model in a separate row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="36dp">
+
+        <TextView
+            android:id="@+id/tv_model"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verna"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:padding="12dp"
+            android:background="@drawable/rounded_text_background" />
+    </LinearLayout>
+
+    <!-- Kilometers selection title -->
+    <TextView
+        android:id="@+id/tv_kilometer_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select the kilometers driven by your car"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Kilometer options -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Option 1 -->
+        <TextView
+            android:id="@+id/btn_km_option_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0km - 10,000 km"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_button" />
+
+        <!-- Option 2 -->
+        <TextView
+            android:id="@+id/btn_km_option_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10,000 km - 20,000 Km"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_button" />
+
+        <!-- Option 3 -->
+        <TextView
+            android:id="@+id/btn_km_option_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="20,000km - 30,000 km"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_button" />
+
+        <!-- Option 4 -->
+        <TextView
+            android:id="@+id/btn_km_option_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="30,000km - 40,000 km"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_button" />
+
+        <!-- Option 5 -->
+        <TextView
+            android:id="@+id/btn_km_option_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="40,000km - 50,000 km"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_button" />
+
+        <!-- Option 6 -->
+        <TextView
+            android:id="@+id/btn_km_option_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="50,000km - 60,000 km"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_button" />
+
+        <!-- Option 7 -->
+        <TextView
+            android:id="@+id/btn_km_option_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="60,000km - 70,000 km"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="@drawable/rounded_button" />
+    </LinearLayout>
+</LinearLayout>

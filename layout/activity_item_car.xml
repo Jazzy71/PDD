@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/bg_card"
+    android:layout_marginBottom="12dp">
+
+    <ImageView
+        android:id="@+id/img_car"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/car_wagon" />
+
+    <TextView
+        android:id="@+id/tv_car_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2015 Maruti Wagon"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/tv_car_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="43,271 km · petrol · manual"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginTop="2dp" />
+
+    <TextView
+        android:id="@+id/tv_car_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="₹3.11 Lakh"
+        android:textSize="15sp"
+        android:textColor="#1E88E5"
+        android:layout_marginTop="4dp" />
+
+    <Button
+        android:id="@+id/btn_buy_now"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buy now"
+        android:layout_marginTop="8dp"
+        android:textAllCaps="false"
+        android:background="@drawable/button_black"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>

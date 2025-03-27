@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F6F6"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header with back button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back_black"
+            android:contentDescription="Back button" />
+
+    </LinearLayout>
+
+    <!-- Notification title with icon -->
+    <LinearLayout
+        android:id="@+id/layoutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="24dp">
+
+        <ImageView
+            android:id="@+id/imgNotificationBell"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_notification"
+            android:contentDescription="Notification bell icon" />
+
+        <TextView
+            android:id="@+id/txtNotificationTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Notification"
+            android:textColor="#000000"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- First notification item -->
+    <LinearLayout
+        android:id="@+id/layoutNotificationItem1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/imgSmile1"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="top"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_smile"
+            android:contentDescription="Smile icon" />
+
+        <TextView
+            android:id="@+id/txtNotificationMessage1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Grab the opportunity to save more on your dream car!"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- Second notification item -->
+    <LinearLayout
+        android:id="@+id/layoutNotificationItem2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/imgSmile2"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="top"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_smile"
+            android:contentDescription="Smile icon" />
+
+        <TextView
+            android:id="@+id/txtNotificationMessage2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stay informed about exclusive offers, discounts, and promotions from dealers and sellers"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- Third notification item -->
+    <LinearLayout
+        android:id="@+id/layoutNotificationItem3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/imgSmile3"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="top"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_smile"
+            android:contentDescription="Smile icon" />
+
+        <TextView
+            android:id="@+id/txtNotificationMessage3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Receive notifications when potential buyers show interest in your listed car"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>
